@@ -5,9 +5,9 @@ This service provider adds Rollbar as a driver to Adonis Logger.
 This repo is based from https://github.com/keeross/adonis-logger-logentries.
 
 
-##Usage
+## Usage
 
-###Registering provider
+### Registering provider
 
 Make sure to register the provider inside `start/app.js` file.
 
