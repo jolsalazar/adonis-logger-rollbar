@@ -1,0 +1,55 @@
+{
+  "name": "adonis-logger-rollbar",
+  "version": "1.0.4",
+  "description": "Rollbar driver for Adonis Logger",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "pretest": "npm run lint",
+    "posttest": "npm run coverage",
+    "test:local": "FORCE_COLOR=true node bin/index.js --local",
+    "test": "nyc npm run test:local",
+    "test:win": "set FORCE_COLOR=true && node bin/index.js --win",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "keywords": [
+    "adonisjs",
+    "logger",
+    "rollbar"
+  ],
+  "author": {
+    "name": "José Salazar",
+    "email": "jolsalazar@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "winston": "^3.1.0",
+    "winston-transport-rollbar-3": "^3.1.0"
+  },
+  "devDependencies": {
+    "@adonisjs/fold": "^4.0.9",
+    "@adonisjs/sink": "^1.0.17",
+    "coveralls": "^3.0.2",
+    "cz-conventional-changelog": "^2.1.0",
+    "japa": "^2.0.6",
+    "japa-cli": "^1.0.1",
+    "nyc": "^13.1.0",
+    "semver": "^5.6.0",
+    "standard": "^12.0.1"
+  },
+  "standard": {
+    "globals": [
+      "use"
+    ]
+  },
+  "nyc": {
+    "exclude": [
+      "bin"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
